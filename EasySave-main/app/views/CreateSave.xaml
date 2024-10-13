@@ -1,0 +1,104 @@
+﻿<Page x:Class="EasySaveV2.app.views.CreateSave"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasySaveV2.app.views"
+      mc:Ignorable="d" d:DesignWidth="1024"
+      Title="CreateSave" Height="565">
+
+    <Grid Margin="0,0,0,66">
+
+        <Grid HorizontalAlignment="Left" Height="100" Margin="116,384,0,0" VerticalAlignment="Top" Width="336">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="11*"/>
+            </Grid.RowDefinitions>
+
+            <RadioButton x:Name="Complet" FontSize="23" FontFamily="helvetica" VerticalContentAlignment="Center" Foreground="White" Content="complet" HorizontalAlignment="Left" Margin="6,58,0,0" VerticalAlignment="Top" Height="26" Grid.RowSpan="2" Width="153"/>
+            <RadioButton x:Name="Differential" FontSize="23" FontFamily="helvetica" VerticalContentAlignment="Center" Foreground="White" Content="differentiel" HorizontalAlignment="Left" Margin="128,58,0,0" VerticalAlignment="Top" Height="26" Width="135" Grid.RowSpan="2"/>
+            <Label x:Name="TypeOfSave" FontSize="23" FontFamily="helvetica" Content="Save Type" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="234" Margin="0,6,0,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="55" Margin="192,85,0,0" VerticalAlignment="Top" Width="236">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75*"/>
+                <ColumnDefinition Width="187*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="NameSave" FontSize="23" FontFamily="helvetica" Foreground="White" Content="Save Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-77,-41,0,0" Height="36" Width="260" Grid.ColumnSpan="2"/>
+            <TextBox x:Name="SaveNameEnter" Margin="-77,14,-153,0" TextWrapping="Wrap" Height="26" Grid.ColumnSpan="2" TextAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </Grid>
+        <Button x:Name="Save" FontSize="40" FontFamily="helvetica" Content="Save" HorizontalAlignment="Left" Margin="734,145,0,0" VerticalAlignment="Top" Click="CreateSave1_Click" Height="130" Width="201" Background="White">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="SelectFiles" Content=". . ." HorizontalAlignment="Left" Margin="379,204,0,0" VerticalAlignment="Top" Height="28" Width="28" Click="SelectFiles_Click" RenderTransformOrigin="0.536,0.481" Background="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <TextBlock Name="SaveSource" FontSize="23" FontFamily="helvetica" HorizontalAlignment="Left" Foreground="White" Margin="114,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336"><Run Language="fr-fr" Text="Source"/></TextBlock>
+        <TextBlock Name="SaveTarget" FontSize="23" FontFamily="helvetica" HorizontalAlignment="Left" Foreground="White" Margin="116,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"><Run Language="fr-fr" Text="Target"/></TextBlock>
+
+        <Button x:Name="TargetFiles" Content=". . ." HorizontalAlignment="Left" Margin="596,305,0,0" VerticalAlignment="Top" Height="28" Width="28" Click="TargetFiles_Click" RenderTransformOrigin="0.393,0.512" Background="White">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox Name="SourceSave" IsReadOnly = "True" HorizontalAlignment="Left" Height="28" Margin="114,204,0,0" VerticalAlignment="Top" Width="464" VerticalContentAlignment="Center">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Name="TargetSave" IsReadOnly = "True" HorizontalAlignment="Left" Height="28" Margin="116,305,0,0" VerticalAlignment="Top" Width="464" VerticalContentAlignment="Center">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBlock HorizontalAlignment="Left" Margin="348,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text=""/>
+
+
+    </Grid>
+</Page>
+
+

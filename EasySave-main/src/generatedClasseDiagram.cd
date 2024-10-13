@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasySaveConsole.app.models.BackupTask">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAIAIAAAAAAAAAAFAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>app\models\BackupTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.models.BackupTaskList">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>app\models\BackupTaskList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.models.BackupTaskProgress">
+    <Position X="16.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQAAAgAAAAAAgECgAAAAAAAAEAAAAAAAIAAA=</HashCode>
+      <FileName>app\models\BackupTaskProgress.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.models.hashLog">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>app\models\hashLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.models.Language">
+    <Position X="14.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAgAAAAAAAAAAABAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>app\models\Language.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.controllers.BackupTaskViewModel">
+    <Position X="4.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAAACAAACAAAAAAAAAAAAAAAAAACAAAAgAAAAAAA=</HashCode>
+      <FileName>app\viewModel\BackupTaskViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.controllers.LoggingViewModel">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>app\viewModel\LoggingViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.viewModel.ConsoleViewModel">
+    <Position X="4.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QEAAEAgBQAAAACAACAAAAAACAgAAAAAIpAQAAAAAAAA=</HashCode>
+      <FileName>app\viewModel\ConsoleViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.viewModel.TestViewModel">
+    <Position X="7.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAACAAAAAAAAEAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>app\viewModel\TestViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.viewModel.UtilsController">
+    <Position X="10" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AFAAABAAAAAAAAAAAAAAAAAAQCAAAAABAIAAABAAAAA=</HashCode>
+      <FileName>app\viewModel\UtilsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasySaveConsole.app.views.launchConsole">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>app\views\launchConsole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

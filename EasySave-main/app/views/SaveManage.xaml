@@ -1,0 +1,221 @@
+﻿<Page x:Class="EasySaveV2.SaveManage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasySaveV2"
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
+       
+    mc:Ignorable="d" d:DesignWidth="1024"
+      Title="SaveManege" Height="526">
+
+    <Grid Margin="0,0,0,56">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="287*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid IsReadOnly="True" Height="408" FontSize="16" FontWeight="Normal" Foreground="White" HorizontalAlignment="Left" Name="LoadSaves" VerticalAlignment="Center" AutoGenerateColumns="False" ItemsSource="{Binding}" Width="744" ColumnWidth="110" RowHeight="40" Grid.ColumnSpan="2" Margin="10,0,0,0" Background="White" RowBackground="#696969" AlternatingRowBackground="Gray" BorderBrush="Transparent" VerticalGridLinesBrush="Transparent" HorizontalGridLinesBrush="Gray" SelectionUnit="FullRow" SelectionChanged="LoadSaves_SelectionChanged" >
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF3C4246"/>
+
+                </Style>
+
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn  FontSize="16" Header="UUID" Binding="{Binding Path=uuid}" FontFamily="helvetica" Visibility="Hidden" Width="*" FontWeight="Bold">
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="saveName" Foreground="White"  FontSize="15" Header="Name" Binding="{Binding Path=name}" FontFamily="helvetica"  Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="saveSource" Foreground="White" FontSize="15" Header="Source" Binding="{Binding Path=source}" FontFamily="helvetica" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="saveTarget" Foreground="White" FontSize="15" Header="Target" Binding="{Binding Path=target}" FontFamily="helvetica"  Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="saveType" Foreground="White" FontSize="15" Header="Type" Binding="{Binding Path=type}" FontFamily="helvetica"  Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn x:Name="saveStatus" Foreground="White" FontSize="15" Header="Progress" Binding="{Binding Path=progress.state}" FontFamily="helvetica" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn >
+                <DataGridTemplateColumn x:Name="progressBar" Header="Progression" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ProgressBar Value="{Binding Path=progress.pourcentage}" Minimum="0" Maximum="100" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn x:Name="progressValue" Foreground="White" FontSize="15" Header="Progress Value" Binding="{Binding Path=progress.pourcentage,StringFormat={}{0}%}" FontFamily="helvetica" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Name="Create" Content="Créer" FontSize="20" FontFamily="Helvetica" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Height="60" Width="126" Grid.Column="1" Click="Create_Click" Background="White">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#0F292D" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="Edit" Content="Modifier" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" Height="60" Width="126" Grid.Column="1" Click="Edit_Click" Background="White" RenderTransformOrigin="0.525,-0.506">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="Delete" Content="Supprimer" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Center" Margin="0,215,0,0" VerticalAlignment="Top" Height="60" Width="126" Grid.Column="1" Click="Delete_Click" Background="White">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="Start" Content="Lancer" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Center" Margin="0,303,0,0" VerticalAlignment="Top" Height="60" Width="126" Grid.Column="1" Click="Start_Click" Background="White">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Name="Stop" Content="Arrêter" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Center" Margin="0,397,0,0" VerticalAlignment="Top" Height="60" Width="126" Grid.Column="1" Click="Stop_Click" Background="White" RenderTransformOrigin="0.493,-1.334">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>
+

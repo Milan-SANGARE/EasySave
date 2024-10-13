@@ -1,0 +1,233 @@
+﻿<Page x:Class="EasySaveV2.app.views.Settings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EasySaveV2.app.views"
+      mc:Ignorable="d" d:DesignWidth="1024"
+      Title="Settings" Height="660">
+
+    <Grid Margin="0,0,0,10">
+        <RadioButton Name="json" Content="JSON" Foreground="White" FontSize="20" FontFamily="helvetica" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="264,549,0,0" VerticalAlignment="Top" Height="24" Width="84"  Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="xml" Content="XML" Foreground="White" FontSize="20" FontFamily="helvetica" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="142,549,0,0" VerticalAlignment="Top" Height="24" Width="66" Checked="RadioButton_Checked" RenderTransformOrigin="0.434,1.047"/>
+
+
+        <ListBox x:Name="ChoixCryptage" ItemsSource="{Binding}" Width="200" HorizontalAlignment="Left" BorderBrush="Black"
+            BorderThickness="0,0,1,1" Margin="90,88,0,363" SelectionMode="Extended" 
+            Background="White" AutomationProperties.ItemType="string">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <Button Name="SaveConfig" Content="Validation de la configuration " FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="612,519,0,0" VerticalAlignment="Top" Height="38" Width="272" RenderTransformOrigin="-0.741,2.4" Click="SaveConfig_Click_2" Background="White">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="7"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox Name="workJob" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="634,354,0,0" Text="example.exe" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="36" TextAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.493,-0.128" TextChanged="workJob_TextChanged">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox Name="maxSizeFile" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="628,64,0,0" PreviewTextInput="NumberValidationTextBox" Text="1000" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="38" TextAlignment="Center" VerticalContentAlignment="Center">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <TextBox Name="numberThreads" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="628,234,0,0" PreviewTextInput="NumberValidationTextBox" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="40" TextAlignment="Center" VerticalContentAlignment="Center">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label Name="jobSoftware" Content="Choix du logiciel métier :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="275" Foreground="White" Margin="611,284,0,0"/>
+
+        <Grid HorizontalAlignment="Left" Margin="256,429,0,0" VerticalAlignment="Top" Width="367">
+            <Grid.ColumnDefinitions>
+            </Grid.ColumnDefinitions>
+            <Label Name="AddExtension" Content="Ajout d'extension :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="326" Foreground="White" Margin="-159,-143,0,0"/>
+            <Button x:Name="ExtAjout" Content="Ajouter" HorizontalAlignment="Left" FontFamily="helvetica" Margin="11,-84,0,162" Width="68" Height="30" Click="ExtAjout_Click" Background="White" FontSize="15" RenderTransformOrigin="0.436,-0.656">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <TextBox x:Name="InputExt" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="34" Margin="-159,-86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Text=".">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="SupChoixCrypt" Content="Supprimer" HorizontalAlignment="Left" FontFamily="helvetica" Margin="99,-84,0,0" Width="92" Height="30" Background="White" FontSize="15" VerticalAlignment="Top" Click="SupChoixCrypt_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Label x:Name="ChoixExtPrio" Content="Ajout d'extension :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="425" Foreground="White" Margin="-159,-23,0,0"/>
+            <Button x:Name="SupChoixPrio" Content="Supprimer" HorizontalAlignment="Left" FontFamily="helvetica" Margin="99,21,0,57" Width="92" Height="30" Background="White" FontSize="15" Click="SupChoixPrio_Click" RenderTransformOrigin="0.482,-0.111">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBox x:Name="InputPrio" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="36" Margin="-159,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Text="." RenderTransformOrigin="0.556,-0.454">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+            <Button x:Name="AddChoixPrio" Content="Ajouter" HorizontalAlignment="Left" FontFamily="helvetica" Margin="20,21,0,57" Width="68" Height="30" Background="White" FontSize="15" Click="AddChoixPrio_Click" RenderTransformOrigin="0.456,-0.6">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="#D3D3D3" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </Grid>
+        <Label Name="ThreadNumber" Content="Choix du nombre de threads :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="298" Foreground="White" Margin="596,191,0,0"/>
+        <Label Name="MaxSize" Content="Choix de la taille de fichier maximum (en Octet) :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="428" Foreground="White" Margin="596,30,0,0"/>
+        <Label Name="Extensions" Content="Choix des extensions à crypter :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="320" Foreground="White" Margin="30,37,0,0"/>
+        <Label Name="LogFormat" Content="Choix du format des logs :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="46" VerticalAlignment="Top" Width="283" Foreground="White" Margin="108,507,0,0"/>
+        <ListBox x:Name="ChoixPrio" Width="200" HorizontalAlignment="Left" BorderBrush="Black"
+            BorderThickness="0,0,1,1" Margin="314,88,0,363" SelectionMode="Extended" 
+            Background="White" AutomationProperties.ItemType="string">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
+        <Label x:Name="ExtensionsPrio" Content="jaj :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="438" Foreground="White" Margin="327,37,0,0"/>
+        <TextBox x:Name="choice_key" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="634,436,0,0" Text="key" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="61" TextAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.493,-0.128">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label x:Name="key" Content="Key :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="41" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="271" Foreground="White" Margin="611,395,0,0"/>
+
+        <TextBox x:Name="blockSize" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Margin="628,146,0,0" PreviewTextInput="NumberValidationTextBox" Text="1000" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Height="40" TextAlignment="Center" VerticalContentAlignment="Center">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label x:Name="Blocksize" Content="Taille des blocks :" FontSize="20" FontFamily="helvetica" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="428" Foreground="White" Margin="596,107,0,0"/>
+
+
+    </Grid>
+</Page>
