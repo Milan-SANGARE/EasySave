@@ -1,0 +1,114 @@
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\burger.txt
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\burger.txt
+Size (Bytes): 41
+Elapsed Time: 00:00:00.0241422
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\truc machin.txt
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\truc machin.txt
+Size (Bytes): 15
+Elapsed Time: 00:00:00.0011633
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\.git\config
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\config
+Size (Bytes): 130
+Elapsed Time: 00:00:00.0129711
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\.git\description
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\description
+Size (Bytes): 73
+Elapsed Time: 00:00:00.0109180
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\.git\HEAD
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\HEAD
+Size (Bytes): 23
+Elapsed Time: 00:00:00.0134668
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\applypatch-msg.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\applypatch-msg.sample
+Size (Bytes): 478
+Elapsed Time: 00:00:00.0141819
+
+2022-11-30_10-17-13: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\commit-msg.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\commit-msg.sample
+Size (Bytes): 896
+Elapsed Time: 00:00:00.0639045
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\fsmonitor-watchman.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\fsmonitor-watchman.sample
+Size (Bytes): 4726
+Elapsed Time: 00:00:00.0198846
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\post-update.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\post-update.sample
+Size (Bytes): 189
+Elapsed Time: 00:00:00.0108217
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-applypatch.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-applypatch.sample
+Size (Bytes): 424
+Elapsed Time: 00:00:00.0145646
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-commit.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-commit.sample
+Size (Bytes): 1643
+Elapsed Time: 00:00:00.0166005
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-merge-commit.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-merge-commit.sample
+Size (Bytes): 416
+Elapsed Time: 00:00:00.0128280
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-push.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-push.sample
+Size (Bytes): 1374
+Elapsed Time: 00:00:00.0156054
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-rebase.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-rebase.sample
+Size (Bytes): 4898
+Elapsed Time: 00:00:00.0152858
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\pre-receive.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\pre-receive.sample
+Size (Bytes): 544
+Elapsed Time: 00:00:00.0112765
+
+2022-11-30_10-17-14: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\prepare-commit-msg.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\prepare-commit-msg.sample
+Size (Bytes): 1492
+Elapsed Time: 00:00:00.0148360
+
+2022-11-30_10-17-15: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\push-to-checkout.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\push-to-checkout.sample
+Size (Bytes): 2783
+Elapsed Time: 00:00:00.0153067
+
+2022-11-30_10-17-15: Save1
+Source: c:\users\pierr\messandwich\.git\hooks\update.sample
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\hooks\update.sample
+Size (Bytes): 3650
+Elapsed Time: 00:00:00.0156434
+
+2022-11-30_10-17-15: Save1
+Source: c:\users\pierr\messandwich\.git\info\exclude
+Destination: c:\\users\\pierr\\essai\Save1_2022-11-30_10-17-13\.git\info\exclude
+Size (Bytes): 240
+Elapsed Time: 00:00:00.0155278
+
